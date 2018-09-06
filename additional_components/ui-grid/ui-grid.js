@@ -1647,13 +1647,13 @@ angular.module('ui.grid')
      */
     addToGridMenu: function( grid, menuItems ) {
       if ( !angular.isArray( menuItems ) ) {
-        gridUtil.logError( 'addToGridMenu: menuItems must be an array, and is not, not adding any items');
+        gridUtil.logError('增加菜单项：菜单项必须是数组，如果不是，不会添加任何项。');
       } else {
         if ( grid.gridMenuScope ){
           grid.gridMenuScope.registeredMenuItems = grid.gridMenuScope.registeredMenuItems ? grid.gridMenuScope.registeredMenuItems : [];
           grid.gridMenuScope.registeredMenuItems = grid.gridMenuScope.registeredMenuItems.concat( menuItems );
         } else {
-          gridUtil.logError( 'Asked to addToGridMenu, but gridMenuScope not present.  Timing issue?  Please log issue with ui-grid');
+          gridUtil.logError( '请求添加菜单项，但是菜单区没有出现。超时？请发布错误');
         }
       }
     },
@@ -1679,7 +1679,7 @@ angular.module('ui.grid')
         grid.gridMenuScope.registeredMenuItems.forEach( function( value, index ) {
           if ( value.id === id ){
             if (foundIndex > -1) {
-              gridUtil.logError( 'removeFromGridMenu: found multiple items with the same id, removing only the last' );
+              gridUtil.logError( '移除菜单: 发现具有相同ID的多个项目，只删除最后一个' );
             } else {
 
               foundIndex = index;
@@ -1738,7 +1738,7 @@ angular.module('ui.grid')
 
       if ( $scope.grid.options.gridMenuCustomItems ){
         if ( !angular.isArray( $scope.grid.options.gridMenuCustomItems ) ){
-          gridUtil.logError( 'gridOptions.gridMenuCustomItems must be an array, and is not');
+          gridUtil.logError( '菜单项目必须是数组，而不是');
         } else {
           menuItems = menuItems.concat( $scope.grid.options.gridMenuCustomItems );
         }
@@ -1867,7 +1867,7 @@ angular.module('ui.grid')
           menuItem.title = errorValue;
         });
       } else {
-        gridUtil.logError('Expected gridMenuTitleFilter to return a string or a promise, it has returned neither, bad config');
+        gridUtil.logError('菜单过滤应该返回字符串或是promise，它都没有返回，配置失败');
         menuItem.title = 'badconfig';
       }
     },
@@ -2481,9 +2481,9 @@ function ($compile, $timeout, $window, $document, gridUtil, uiGridConstants, i18
                   }
               })){
                 //We tried our best to find it for you
-                gridUtil.logError("["+directiveName+"] A valid grid could not be found to bind id. Are you using this directive " +
-                                 "within the correct scope? Trying to generate id: [gridID]-" + val);
-                throw new Error("No valid grid could be found");
+                gridUtil.logError("["+directiveName+"] 无法找到有效的绑定ID的网格。是否使用此指令？ " +
+                                 "在当前作用域? 尝试生成id: [gridID]-" + val);
+                throw new Error("找不到有效的网格");
               }
 
               if (grid){
@@ -2592,17 +2592,17 @@ function ($compile, $timeout, $window, $document, gridUtil, uiGridConstants, i18
 
             // Verify that the render container for this element exists
             if (!$scope.rowContainerName) {
-              throw "No row render container name specified";
+              throw "指定没有行渲染容器名称";
             }
             if (!$scope.colContainerName) {
-              throw "No column render container name specified";
+              throw "未指定列呈现容器名称";
             }
 
             if (!grid.renderContainers[$scope.rowContainerName]) {
-              throw "Row render container '" + $scope.rowContainerName + "' is not registered.";
+              throw "行渲染容器 '" + $scope.rowContainerName + "' 没有注册。";
             }
             if (!grid.renderContainers[$scope.colContainerName]) {
-              throw "Column render container '" + $scope.colContainerName + "' is not registered.";
+              throw "列渲染容器 '" + $scope.colContainerName + "' 没有注册。";
             }
 
             var rowContainer = $scope.rowContainer = grid.renderContainers[$scope.rowContainerName];
@@ -3531,7 +3531,7 @@ angular.module('ui.grid')
       }
     }
     else {
-      throw new Error('No ID provided. An ID must be given when creating a grid.');
+      throw new Error('没有提供ID。创建网格时必须给出ID。');
     }
 
     self.id = options.id;
@@ -4067,7 +4067,7 @@ angular.module('ui.grid')
       types = [uiGridConstants.dataChange.ALL];
     }
     if ( !Array.isArray(types)){
-      gridUtil.logError("Expected types to be an array or null in registerDataChangeCallback, value passed was: " + types );
+      gridUtil.logError("在注册数据改变回调中，期望类型为数组或null，传递的值为 : " + types );
     }
     this.dataChangeCallbacks[uid] = { callback: callback, types: types, _this:_this };
 
@@ -4122,7 +4122,7 @@ angular.module('ui.grid')
          type === constants.OPTIONS ){
       this.callDataChangeCallbacks( type );
     } else {
-      gridUtil.logError("Notified of a data change, but the type was not recognised, so no action taken, type was: " + type);
+      gridUtil.logError("通知数据更改，但未识别类型，因此未采取任何行动，类型为 : " + type);
     }
   };
 
@@ -11790,99 +11790,99 @@ module.filter('px', function() {
       $delegate.add('en', {
         headerCell: {
           aria: {
-            defaultFilterLabel: 'Filter for column',
-            removeFilter: 'Remove Filter',
-            columnMenuButtonLabel: 'Column Menu'
+            defaultFilterLabel: '列过滤',
+            removeFilter: '移除过滤',
+            columnMenuButtonLabel: '列菜单'
           },
-          priority: 'Priority:',
-          filterLabel: "Filter for column: "
+          priority: '权限:',
+          filterLabel: "列过滤: "
         },
         aggregate: {
-          label: 'items'
+          label: '项'
         },
         groupPanel: {
-          description: 'Drag a column header here and drop it to group by that column.'
+          description: '在此处拖动列标题并将其丢到该列的组中。'
         },
         search: {
-          placeholder: 'Search...',
-          showingItems: 'Showing Items:',
-          selectedItems: 'Selected Items:',
-          totalItems: 'Total Items:',
-          size: 'Page Size:',
-          first: 'First Page',
-          next: 'Next Page',
-          previous: 'Previous Page',
-          last: 'Last Page'
+          placeholder: '查找中...',
+          showingItems: '显示项:',
+          selectedItems: '选择项:',
+          totalItems: '全部项:',
+          size: '页大小:',
+          first: '第一页',
+          next: '下一页',
+          previous: '前一页',
+          last: '最后一页'
         },
         menu: {
-          text: 'Choose Columns:'
+          text: '选择列:'
         },
         sort: {
-          ascending: 'Sort Ascending',
-          descending: 'Sort Descending',
-          none: 'Sort None',
-          remove: 'Remove Sort'
+          ascending: '升序排序',
+          descending: '降序排序',
+          none: '不排序',
+          remove: '移除排序'
         },
         column: {
-          hide: 'Hide Column'
+          hide: '隐藏列'
         },
         aggregation: {
-          count: 'total rows: ',
-          sum: 'total: ',
-          avg: 'avg: ',
-          min: 'min: ',
-          max: 'max: '
+          count: '全部列: ',
+          sum: '全部: ',
+          avg: '参数: ',
+          min: '最小: ',
+          max: '最大: '
         },
         pinning: {
-          pinLeft: 'Pin Left',
-          pinRight: 'Pin Right',
-          unpin: 'Unpin'
+          pinLeft: 'Pin左',
+          pinRight: 'Pin右',
+          unpin: '无pin'
         },
         columnMenu: {
-          close: 'Close'
+          close: '关闭'
         },
         gridMenu: {
           aria: {
-            buttonLabel: 'Grid Menu'
+            buttonLabel: '网格菜单'
           },
-          columns: 'Columns:',
-          importerTitle: 'Import file',
-          exporterAllAsCsv: 'Export all data as csv',
-          exporterVisibleAsCsv: 'Export visible data as csv',
-          exporterSelectedAsCsv: 'Export selected data as csv',
-          exporterAllAsPdf: 'Export all data as pdf',
-          exporterVisibleAsPdf: 'Export visible data as pdf',
-          exporterSelectedAsPdf: 'Export selected data as pdf'
+          columns: '列:',
+          importerTitle: '导入文件',
+          exporterAllAsCsv: '以csv格式导出所有数据',
+          exporterVisibleAsCsv: '以csv格式导出可见数据',
+          exporterSelectedAsCsv: '以csv格式导出选中数据',
+          exporterAllAsPdf: '以pdf格式导出所有数据',
+          exporterVisibleAsPdf: '以pdf格式导出可见数据',
+          exporterSelectedAsPdf: '以pdf格式导出选中数据'
         },
         importer: {
-          noHeaders: 'Column names were unable to be derived, does the file have a header?',
-          noObjects: 'Objects were not able to be derived, was there data in the file other than headers?',
-          invalidCsv: 'File was unable to be processed, is it valid CSV?',
-          invalidJson: 'File was unable to be processed, is it valid Json?',
-          jsonNotArray: 'Imported json file must contain an array, aborting.'
+          noHeaders: '无法导出列名，文件是否有页眉？',
+          noObjects: '对象不能被导出，文件中的数据不是头文件吗？',
+          invalidCsv: '文件无法处理，它是有效的CSV吗？',
+          invalidJson: '文件无法处理，是否有效JSON？',
+          jsonNotArray: '导入的JSON文件必须包含一个数组，中止。'
         },
         pagination: {
           aria: {
-            pageToFirst: 'Page to first',
-            pageBack: 'Page back',
-            pageSelected: 'Selected page',
-            pageForward: 'Page forward',
-            pageToLast: 'Page to last'
+            pageToFirst: '首页',
+            pageBack: '返回',
+            pageSelected: '选择页',
+            pageForward: '页面转发',
+            pageToLast: '最后一页'
           },
-          sizes: 'items per page',
-          totalItems: 'items',
-          through: 'through',
-          of: 'of'
+          sizes: '每页项',
+          totalItems: '项',
+          through: '通过',
+          of: '属于'
         },
         grouping: {
-          group: 'Group',
-          ungroup: 'Ungroup',
-          aggregate_count: 'Agg: Count',
-          aggregate_sum: 'Agg: Sum',
-          aggregate_max: 'Agg: Max',
-          aggregate_min: 'Agg: Min',
-          aggregate_avg: 'Agg: Avg',
-          aggregate_remove: 'Agg: Remove'
+          group: '群主',
+          ungroup: '无群组',
+          aggregate_count: 'Agg: 总数',
+          aggregate_sum: 'Agg: 总和',
+          aggregate_max: 'Agg: 最大',
+          aggregate_min: 'Agg: 最小',
+          aggregate_avg: 'Agg: 参数',
+          aggregate_remove: 'Agg: 移除'
         }
       });
       return $delegate;

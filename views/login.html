@@ -2,7 +2,9 @@
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-        	<div class="component-pack component login">
+			<div class="component-pack component login" style="
+					margin-top: 320px
+				">
         		<div class="title">
 		            <h1 translate="LOGIN.TITLE"></h1>
         		</div>
@@ -18,7 +20,7 @@
 		                           ng-model="password">
 		                </div>
 		                <div class="btn-group pull-right">
-			                <button type="submit" class="btn btn-default" ng-click="login()" ng-disabled="!username || !password">
+			                <button type="submit" class="btn btn-primary" ng-click="login()" ng-disabled="!username || !password">
 			                	{{'LOGIN.ACTION.CONFIRM' | translate}}
 			                </button>
 		                </div>
