@@ -399,8 +399,8 @@
         },
         "POPUP": {
             "UPLOAD": {
-                "DESCRIPTION": "Select a .bpmn, .bpmn20.xml process file to deploy or upload a package of processes (with assets) contained in .zip or .bar file.",
-                "WARNING": "Uploading a process is only possible to an Activiti Core Engine, not to an Activiti 6 UI instance. Processes in the Activiti 6 UI should be deployed using an app that is shared with individuals or groups.",
+                "DESCRIPTION": "选择.bpmn或.bpmn20.xml格式的流程文件部署或上传包含在.zip或.bar格式文件内的一系列流程（包含资产）。",
+                "WARNING": "只可以通过Activiti核心引擎上传文件，而不是Activiti 6 UI 实例。Activiti 6 UI中的流程应该使用与个人或组共享的应用程序来部署。",
                 "DROPZONE": "或将文件拖放至此处",
                 "NO-DROP": "您的浏览器不支持文件拖放",
                 "CANCEL-UPLOAD": "取消上传",
@@ -556,15 +556,14 @@
         "USER": "用户:",
         "MASTER-MANDATORY": "主要强制配置:",
         "METRICS-SEND-INTERVAL": "发送间隔度量:",
-        "ENDPOINT-HELP": "The endpoint configuration (each cluster has only one) needs to point to an Activiti REST installation. This endpoint will then be used to retrieve and manage the data used in the other sections (for example deployments, process definitions, and so on) of this application.",
-        "ENDPOINT-NAME": "名称:",
+        "ENDPOINT-HELP": "终端配置(每个群仅有一个) 需要安装Activiti REST 。终端将用于检索和管理此应用程序的其他部分（例如，部署、流程定义等）中使用的数据。",
         "ENDPOINT-DESCRIPTION": "描述:",
         "ENDPOINT-ADDRESS": "服务器地址:",
         "ENDPOINT-PORT": "服务器端口:",
         "ENDPOINT-CONTEXT-ROOT": "上下文root:",
         "ENDPOINT-REST-ROOT": "REST root:",
         "ENDPOINT-USERNAME": "用户名:",
-        "PROCESS-ENGINE-HELP": "This section allows you to define a 'master configuration' for the cluster. All instances in the cluster will use this configuration when they boot up (if the cluster config jar is on the classpath or if the corresponding properties are set). If not set, the instances will use their local configuration files.",
+        "PROCESS-ENGINE-HELP": "此部分允许您为群定义一个“主配置”。群内所有实例在启动时都将使用此配置（如果过群配置路径在jar文件中或设置过相应地属性）。如果没有设置，实例将使用其本地配置文件。",
         "NO-MASTER-DEFINED": "无主要强制配置",
         "ACTION": {
             "SHOW-PASSWORD": "显示密码",
@@ -804,7 +803,7 @@
     },
     "FORMS": {
     	"TITLE": "表单",
-        "LIST-MESSAGE": "显示{{size}}个结果, from a total of {{total}} matching forms.",
+        "LIST-MESSAGE": "显示{{size}}个结果, 其中匹配到的表单共有{{total}}张。",
         "LIST-MESSAGE-EMPTY": "无匹配表单.",
         "HEADER": {
             "ID": "ID",
