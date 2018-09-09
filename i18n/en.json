@@ -50,7 +50,7 @@
         "CATEGORY": "类型:",
         "SUSPENDED": "暂停:",
         "DEPLOYMENT": "部署:",
-        "TENANT": "Tenant:",
+        "TENANT": "租借人:",
         "START-FORM-DEFINED": "启动表单定义：",
         "GRAPHICAL-NOTATION-DEFINED": "图形符号定义：",
         "PROCESS-INSTANCES-SIZE": "定义共有{{total}}个运行中的流程实例",
@@ -94,7 +94,7 @@
             "NAME": "名称(区分大小写)",
             "KEY": "Key (区分大小写)",
             "DEPLOYMENT-ID": "部署ID",
-            "TENANT-ID": "Tenant ID",
+            "TENANT-ID": "租借人ID",
             "LATEST": "最近版本",
             "LATEST-HELP": "仅显示最新版本"
         },
@@ -111,7 +111,7 @@
             "NAME": "名称",
             "VERSION": "版本",
             "KEY": "Key",
-            "TENANT": "Tenant"
+            "TENANT": "租借人"
         },
         "ACTIONS": {
             "UPLOAD-FROM-MODELER": "从Activiti编辑器上传"
@@ -195,7 +195,7 @@
                 "CREATE": "创建"
             },
             "UPDATE-VARIABLE": {
-                "TITLE": "更新变量： '{{name}}'",
+                "TITLE": "更新变量：'{{name}}'",
                 "NAME": "变量名称",
                 "VALUE": "值",
                 "CHECKED": "真",
@@ -204,7 +204,7 @@
                 "ACTION-UPDATE": "更新"
             },
             "DELETE-VARIABLE": {
-                "TITLE": "删除变量： '{{name}}",
+                "TITLE": "删除变量：'{{name}}",
                 "MESSAGE": "您确定要删除此变量？",
                 "DELETE": "删除"
             }
@@ -228,7 +228,7 @@
             "VARIABLE-NAME": "变量名",
             "VARIABLE-VALUE": "变量值",
             "VARIABLE-BOOLEAN-VALUE": "布尔值: {{value}}",
-            "TENANT-ID": "Tenant identifier"
+            "TENANT-ID": "租借人ID"
         },
         "SORT": {
             "ID": "ID",
@@ -256,7 +256,7 @@
         "PRIORITY": "优先权:",
         "DELEGATION-STATE": "代理状态:",
         "CATEGORY": "类别:",
-        "TENANT-ID": "Tenant:",
+        "TENANT-ID": "租借人:",
         "PARENT": "总任务:",
         "ASSIGNEE": "任务承接人:",
         "OWNER": "所属人:",
@@ -342,7 +342,7 @@
             "STATUS-ACTIVE": "活跃任务",
             "STATUS-COMPLETE": "已完成任务",
             "PROCESS-INSTANCE-ID": "流程实例ID",
-            "TENANT-ID": "Tenant identifier",
+            "TENANT-ID": "租借人ID",
             "OWNER": "所属人 (区分大小写)",
             "PARENT-TASK-ID": "总任务ID",
             "CREATED-BEFORE": "创建前",
@@ -380,7 +380,7 @@
         "LIST-MESSAGE-EMPTY": "无匹配到的部署",
         "FILTER": {
             "NAME": "名称 (区分大小写)",
-            "TENANTID": "Tenant identifier (区分大小写)"
+            "TENANTID": "租借人ID (区分大小写)"
         },
         "SORT": {
             "ID": "ID",
@@ -416,7 +416,7 @@
         "NAME": "名称:",
         "TIME": "部署时间:",
         "CATEGORY": "类型:",
-        "TENANTID": "Tenant identifier:",
+        "TENANTID": "租借人ID:",
         "DEFINITIONS-MESSAGE": "此部署共有{{total}}个流程定义，显示{{size}}.",
         "DEFINITIONS-MESSAGE-EMPTY": "此部署无流程定义。",
         "TITLE": {
@@ -448,8 +448,8 @@
         "PROCESS-INSTANCE": "流程实例:",
         "PROCESS-DEFINITION": "流程定义:",
         "DUEDATE": "到期日期:",
-        "RETRIES-LEFT": "Retries left:",
-        "TENANT-ID": "Tenant:"
+        "RETRIES-LEFT": "左转重试:",
+        "TENANT-ID": "租借人:"
     },
     "JOBS": {
         "TITLE": "工作",
@@ -459,7 +459,7 @@
             "PROCESS-DEFINITION": "流程定义",
             "ALL-PROCESS-DEFINITIONS": "全部流程定义",
             "PROCESS-INSTANCE-ID": "流程实例ID",
-            "TENANT-ID": "Tenant identifier",
+            "TENANT-ID": "租借人ID",
             "DUE-BEFORE": "到期前",
             "DUE-AFTER": "到期后",
             "EXCEPTION": "异常",
@@ -607,7 +607,7 @@
         "LIST-MESSAGE-EMPTY": "无可匹配的应用程序部署。",
         "FILTER": {
             "NAME": "名称",
-            "TENANTID": "Tenant identifier",
+            "TENANTID": "租借人ID",
             "LATEST": "最近版本",
             "LATEST-HELP": "仅显示最近版本"
         },
@@ -623,7 +623,7 @@
             "NAME": "名称",
             "DEPLOY-TIME": "部署时间",
             "DEPLOYED-BY": "部署自",
-            "TENANT": "Tenant ID"
+            "TENANT": "租借人ID"
         },
         "ACTION": {
             "UPLOAD": "上传并发布应用程序"
@@ -652,7 +652,7 @@
         "CATEGORY": "类型:",
         "SUSPENDED": "暂停:",
         "DEPLOYMENT": "部署:",
-        "TENANT-ID": "Tenant ID:",
+        "TENANT-ID": "租借人ID:",
         "START-FORM-DEFINED": "启动表单定义:",
         "GRAPHICAL-NOTATION-DEFINED": "图形符号定义:",
         "PROCESS-DEFINITIONS-SIZE": "应用程序定义共有{{total}}个流程定义",
@@ -755,7 +755,7 @@
         "FILTER": {
             "NAME": "名称",
             "KEY": "Key",
-            "TENANTID": "Tenant identifier"
+            "TENANTID": "租借人ID"
         },
         "SORT": {
             "ID": "ID",
@@ -767,7 +767,7 @@
             "VERSION": "版本",
             "KEY": "Key",
             "DEPLOY-TIME": "部署时间",
-            "TENANT-ID": "Tenant ID"
+            "TENANT-ID": "租借人ID"
         }
     },
     "DECISION-TABLE": {
@@ -794,7 +794,7 @@
         "POPUP": {
             "TITLE": "决策表: ",
             "KEY": "Key: ",
-            "HIT-POLICY": "Hit Policy: ",
+            "HIT-POLICY": "命中策略: ",
             "HIT-POLICIES": {
                 "FIRST": "首次 (一次通过)",
                 "ANY": "任意 (一次通过)"
@@ -809,12 +809,12 @@
             "ID": "ID",
             "NAME": "名称",
             "APPID": "应用程序ID",
-            "TENANTID": "Tenant ID"
+            "TENANTID": "租借人ID"
         },
         "FILTER": {
             "NAME": "名称",
             "APPID": "应用程序部署ID",
-            "TENANTID": "Tenant identifier"
+            "TENANTID": "租借人ID"
         },
         "SORT": {
             "ID": "ID",
@@ -827,7 +827,7 @@
         "APP-ID": "应用程序ID:",
         "DEPLOYMENT-ID": "部署ID:",
         "DESCRIPTION": "描述:",
-        "TENANT": "Tenant:",
+        "TENANT": "租借人:",
         "MESSAGE-EMPTY": "(无)",
         "TITLE": {
             "SUBMITTED-FORMS": "已提交表单"
